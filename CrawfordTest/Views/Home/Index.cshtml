@@ -1,0 +1,22 @@
+﻿@model CrawfordTest.Models.ViewModels.Login
+
+
+
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="text-center">
+        Username:<br />
+        @Html.EditorFor(model => model.username)<br />
+        @Html.ValidationMessageFor(model => model.username)
+        <br />
+
+        Password:<br />
+        @Html.PasswordFor(model => model.password)<br />
+        @Html.ValidationMessageFor(model => model.password)
+
+        <input type="submit" value="Login" />
+    </div>
+</form>
+
+
+

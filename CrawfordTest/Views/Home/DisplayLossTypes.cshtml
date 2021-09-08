@@ -1,0 +1,34 @@
+﻿@model List<CrawfordTest.Models.ViewModels.LossTypeVM>
+
+
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="demoGrid"width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Loss Type ID</th>
+                    <th>Loss Type Code</th>
+                    <th>Loss Type Description</th>
+                </tr>
+            </thead>
+
+            @foreach (CrawfordTest.Models.ViewModels.LossTypeVM lossType in Model)
+            {
+                <tr>
+                    <td>
+                        @lossType.LossTypeID
+                    </td>
+                    <td>
+                        @lossType.LossTypeCode
+                    </td>
+                    <td>
+                        @lossType.LossTypeDescription
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
